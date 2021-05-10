@@ -9,7 +9,7 @@ if (isset($_GET['save'])) {
   header("location: /story.php");
   exit;
 } elseif (isset($_GET['delete'])) {
-  setcookie($_GET['delete'], '', date() - 3600, '/');
+  setcookie($_GET['delete'], '', time() - 3600, '/');
 }
 header("location: /index.php");
 exit;
